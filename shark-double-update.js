@@ -1,4 +1,8 @@
 if (Meteor.isClient) {
+
+  if (typeof console !== 'undefined')
+    console.log("Meteor version: " + Meteor.release);
+
   var updates = 0;
   Session.set('clicks',0);
   Template.hello.greeting = function () {
