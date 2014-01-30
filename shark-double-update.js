@@ -12,10 +12,9 @@ if (Meteor.isClient) {
 
   Template.hello.events({
     'click input': function () {
-      // template data, if any, is available in 'this'
+      Session.set('clicks',Session.get('clicks')+1);
       if (typeof console !== 'undefined')
-        Session.set('clicks',Session.get('clicks')+1);
-        console.log("You pressed the button");
+        console.log("You have pressed the button " + Session.get('clicks') + " times.");
     }
   });
 }
