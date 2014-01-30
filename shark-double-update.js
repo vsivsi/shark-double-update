@@ -14,7 +14,7 @@ if (Meteor.isClient) {
     'click input': function () {
       Session.set('clicks',Session.get('clicks')+1);
       if (typeof console !== 'undefined')
-        console.log("You have pressed the button " + Session.get('clicks') + " times.");
+        console.log("You have pressed the button " + Session.get('clicks') + " times.  There have been " + updates + " updates.");
     }
   });
 }
