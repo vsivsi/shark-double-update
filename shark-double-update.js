@@ -14,13 +14,5 @@ if (Meteor.isClient) {
     return [Session.get('clicks'), updates];
   }
 
-  // Template.hello.events({
-  //   'click input': function () {
-  //     Session.set('clicks',Session.get('clicks')+1);
-  //     if (typeof console !== 'undefined')
-  //       console.log("You have pressed the button " + Session.get('clicks') + " times.  There have been " + updates + " updates.");
-  //   }
-  // });
-
   Meteor.setInterval((function () {Session.set('clicks',Session.get('clicks')+1)}), 1000);
 }
