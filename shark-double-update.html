@@ -8,6 +8,13 @@
 
 <template name="hello">
   <h1>Hello World!</h1>
-  {{greeting}}<br>
-  [Ticks, Updates] === [{{clicks}}]<br>
+  {{greeting}}<br><br>
+  <b>Handlers returning non-objects</b><br>
+  Returned as number: Ticks.Updates === {{numberTicks}}<br>
+  Returned as array: [Ticks, Updates] === [{{arrayTicks}}]<br>
+  Returned as string: [Ticks, Updates] === {{stringTicks}}<br>
+  <br><b>Handlers returning objects with properties of various types</b><br>
+  Returned as string in object: [Ticks, Updates] === {{objectStringTicks.counts}}<br>
+  Returned as array in object: [Ticks, Updates] === [{{objectArrayTicks.counts}}]<br>
+  Returned as numbers in object: {{#with objectNumberTicks}} [Ticks, Updates] === [{{tickCounts}}, {{updateCounts}}]{{/with}}<br>
 </template>
